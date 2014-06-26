@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Cards">
+<head>
+	<meta charset="utf-8">
+	<title>Cards, like, with Angular</title>
+	<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+
+	<div class="card" ng-controller="CardController">
+		<h2>{{ card.title }}</h2>
+		<p>({{ card.assignee }})</p>
+
+		<ul>
+			<li ng-repeat="task in card.tasks">{{ task.title }}</li>
+		</ul>
+	</div>
+
+
+<script src="/scripts/angular.min.js"></script>
+<script src="/scripts/libs.min.js"></script>
+<script src="/scripts/app.js"></script>
+
+</body>
+</html>
