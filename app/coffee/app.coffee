@@ -1,3 +1,4 @@
+# @codekit-append "controllers.coffee"
 # @codekit-append "card.coffee"
 # @codekit-append "task.coffee"
 
