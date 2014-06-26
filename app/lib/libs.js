@@ -1,0 +1,1 @@
+// @codekit-append "angular-xeditable-0.1.8/js/xeditable.js"
