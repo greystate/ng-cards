@@ -8,11 +8,11 @@
 <body>
 
 	<div class="card" ng-controller="CardController">
-		<h2>{{ card.title }}</h2>
-		<p>({{ card.assignee }})</p>
+		<h2><a href="#" editable-text="card.title">{{ card.title }}</a></h2>
+		<a href="#" editable-select="card.assignee" e-ng-options="e.initials for e in employees">{{ card.assignee }}</a>
 
 		<ul>
-			<li ng-repeat="task in card.tasks">{{ task.title }}</li>
+			<li ng-repeat="task in card.tasks"><a href="#" editable-text="task.title">{{ task.title }}</a></li>
 		</ul>
 	</div>
 
