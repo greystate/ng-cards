@@ -1,0 +1,42 @@
+
+.sprint {
+	border: 2px solid #444;
+	border-width: 2px 0;
+	margin: 1em 100px;
+
+	header {
+		float: left;
+	}
+	
+	.feature {
+		display: none;
+	}
+	
+	&.done {
+		header h2 {
+			.font-size(12);
+			color: fade(@done-color, 50%);
+		}
+		
+		.completed { display: none; }
+	}
+	
+	&.inprogress {
+		.feature { display: block; }
+		
+		.completed { }
+	}
+	
+	&.planned {
+		header {
+			h2 { color: fade(#333, 40%); }
+		}
+		
+		.feature {
+			border-style: dashed;
+			
+			display: block;
+		}
+	}
+}
+

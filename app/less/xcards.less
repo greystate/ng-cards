@@ -1,0 +1,56 @@
+@import "helpers-0.6.less";
+
+@done-color: #090;
+
+body {
+	font: 1.1rem/1.4 "DIN-Regular", "verdana";
+/* 	font-size: 24px; */
+	color: #444;
+}
+
+h1 {
+	font-size: 1.5rem;
+	padding-bottom: 8px;
+	text-transform: uppercase;
+	margin: 0;
+	text-align: center;
+	border-bottom: 2px solid rgba(218, 0, 0, 0.2);
+}
+
+.points {
+	float: right;
+	font-size: 2.5rem;
+	display: block;
+	width: 4rem;
+	height: 4rem;
+	line-height: 4rem;
+	text-align: center;
+	padding: 8px;
+	position: absolute;
+	right: -10px;
+	bottom: -10px;
+	margin-top: -40px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.7);
+	border: 1px solid #7d90a5;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.3) inset;
+}
+
+#stats {
+	position: fixed;
+	right: 5rem;
+	bottom: 1rem;
+	border-top: 2px solid #efefef;
+	font: 1.1rem/1.4 "Futura-CondensedMedium", "Georgia", "BodoniSvtyTwoOSITCTT-Book", "verdana";	
+}
+
+#stats .points {
+	right: -6rem;
+	bottom: -2rem;
+}
+
+@import "sprint.less";
+@import "feature.less";
+@import "card.less";
+@import "todo.less";
+@import "burn.less";

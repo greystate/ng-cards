@@ -1,0 +1,91 @@
+.card {
+	overflow: hidden;
+	position: relative;
+	width: 25ex;
+	min-height: 300px;
+	border-radius: 3px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	border: 1px solid #a7a7a7;
+	background: #d8d9e3;
+	padding: 10px;
+	margin: 0 -80px -100px 0;
+	float: left;
+	opacity: 0.7;
+	cursor: pointer;
+	
+	-webkit-transform: scale(0.5) translateY(20px);
+	-webkit-transform-origin: center top;
+	-webkit-transition: all 0.2s ease-out;
+
+	&.done {
+		background: #a3e492;
+		float: right;
+		margin: 0 0 -120px -150px;
+		-webkit-transform: scale(0.3) translateY(20px);
+		
+		&:before {
+			content: "\2713";
+			color: #090;
+			float: right;
+			font-size: 1.5em;
+			margin-top: -0.2em;
+		}
+	}
+	
+	&:target,
+	&.current {
+		background: #e3d587;
+		width: 50ex;
+		margin-top: 50px;
+	}
+	
+	&.current,
+	&:target,
+	&:hover {
+		-webkit-transform: scale(1.0) translateY(0);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+		opacity: 1;
+		z-index: 100;
+	}
+	
+	h1 a { text-decoration: none; color: inherit; }
+	
+	ul {
+		list-style: none;
+		padding: 0 0 20px 12px;
+		border-bottom: 4px double rgba(218, 0, 0, 0.2);
+	}
+
+	li {
+		padding: 2px 0;
+		margin: 0;
+		border-top: 1px dashed rgba(0, 0, 0, 0.3);
+	}
+
+	li:first-child {
+		border: none;
+	}
+
+	li span {
+		float: right;
+		padding-right: 10px;
+		opacity: 0.25;
+	}
+
+	li.done {
+		opacity: 0.25;
+		text-decoration: line-through;
+	}
+
+	.assignee {	
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		display: inline-block;
+		padding: 0 5px;
+		color: #738199;
+		opacity: 0.3;
+		font-style: italic;
+	}
+}
+
