@@ -9,5 +9,6 @@ cardController = cardsApp.controller "CardController", [
 		]
 
 		$scope.card = new Card "Test card", "CS"
-		$scope.card.addTask "Try this out"
+		$scope.card.addTask "HTML", 5
+		$scope.card.addTask "CSS", 8
 	]
