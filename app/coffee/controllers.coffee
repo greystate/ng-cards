@@ -8,7 +8,7 @@ cardController = cardsApp.controller "CardController", [
 			initials: "NS"
 		]
 
-		$scope.card = new Card "Test card", "CS"
+		$scope.card = new Card "Build Page", "CS"
 		$scope.card.addTask "HTML", 5
 		$scope.card.addTask "CSS", 8
 	]
