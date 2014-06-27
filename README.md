@@ -15,16 +15,19 @@ You may notice it's all CoffeeScript, LESS & Kit - which are all supported by th
        scripts/
 ```
 
+* * *
+
 ## Status / Todo
 
 - [x] Implement the Card model
 - [x] Change to support more than one Card :)
-- [ ] Make the *points* changeable on a Crad
+- [ ] Make the *points* changeable on a Card
 - [ ] Implement the Feature model
 - [ ] Implement the Sprint model
 - [ ] Create a model for the Burndown chart
 - [ ] Show the totals (remaining points)
 
 
+ [CK]: http://incident57.com/codekit/
  [SF]: https://twitter.com/sfioritto
 [NGC]: http://training.planningforaliens.com/angular/
