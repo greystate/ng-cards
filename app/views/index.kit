@@ -14,6 +14,7 @@
 		
 		<ul>
 			<li ng-repeat="task in card.tasks" ng-class="{done: task.done}">
+				<input type="checkbox" ng-model="task.done" ng-checked="task.done" />
 				<a href="#" editable-text="task.title">{{ task.title }}</a>
 				<span>{{ task.points }}</span>
 			</li>
