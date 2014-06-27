@@ -6,7 +6,12 @@ features and tasks in a given project.
 On-going project as I wade through [Sean Fioritto][SF]'s [Angular Course][NGC] ...
 
 
+## Status / Todo
 
+- [x] Implement the Card model
+- [ ] Implement the Feature model
+- [ ] Implement the Sprint model
+- [ ] Create a model for the Burndown chart
 
 
  [SF]: https://twitter.com/sfioritto
