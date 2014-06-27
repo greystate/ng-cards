@@ -6,7 +6,15 @@ cardController = cardsApp.controller "CardController", ($scope) ->
 			name: "Niels"
 			initials: "NS"
 		]
+		
+		$scope.cards = []
 
-		$scope.card = new Card "Build Page", "CS"
-		$scope.card.addTask "HTML", 5
-		$scope.card.addTask "CSS", 8
+		card = new Card "Build Page", "CS"
+		card.addTask "HTML", 5
+		card.addTask "CSS", 8
+		$scope.cards.push card
+
+		card = new Card "Build Template", "CS"
+		card.addTask "XML", 3
+		card.addTask "XSLT", 5
+		$scope.cards.push card
