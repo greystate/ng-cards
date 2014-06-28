@@ -9,7 +9,7 @@
 </head>
 <body>
 	
-	<div class="feature" ng-Controller="CardController">
+	<div class="feature" ng-controller="CardController">
 		<div class="card" ng-repeat="card in cards">
 			<h1><a href="#" editable-text="card.title">{{ card.title }}</a></h1>
 		
@@ -28,6 +28,8 @@
 				<span class="points">{{ card.pointsLeft() }}</span>
 			</p>
 		</div>
+		
+		<button class="new card" ng-click="cards.new()">New Card</button>
 	</div>
 
 <script src="/scripts/angular.min.js"></script>
