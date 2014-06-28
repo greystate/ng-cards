@@ -6,7 +6,18 @@ class Card
 		@tasks.push	new Task title, points, done
 	
 	pointsLeft: ->
-		points = 0;
+		{total, left} = @getPoints()
+		left
+		
+	pointsTotal: ->
+		{total, left} = @getPoints()
+		total
+		
+	getPoints: ->
+		total = 0
+		left = 0
 		for task in @tasks
-			points += task.points
-		return points
+			total += task.points
+			left += task.points unless task.done
+		return {total, left}
+		
