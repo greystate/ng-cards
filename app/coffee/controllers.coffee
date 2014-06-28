@@ -1,4 +1,4 @@
-cardController = cardsApp.controller "CardController", ($scope) ->
+cardController = cardsApp.controller "CardController", ($scope, cardsService) ->
 	$scope.employees = [
 		name: "Chriztian"
 		initials: "CS"
@@ -7,14 +7,5 @@ cardController = cardsApp.controller "CardController", ($scope) ->
 		initials: "NS"
 	]
 	
-	$scope.cards = []
+	$scope.cards = cardsService.getSomeTestCards()
 
-	card = new Card "Build Page", "CS"
-	card.addTask "HTML", 5
-	card.addTask "CSS", 8
-	$scope.cards.push card
-
-	card = new Card "Build Template", "CS"
-	card.addTask "XML", 3
-	card.addTask "XSLT", 5
-	$scope.cards.push card

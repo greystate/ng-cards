@@ -1,4 +1,5 @@
 # @codekit-append "controllers.coffee"
+# @codekit-append "services.coffee"
 # @codekit-append "card.coffee"
 # @codekit-append "task.coffee"
 
