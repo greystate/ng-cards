@@ -21,6 +21,7 @@ public/
 
 - [x] Implement the Card model
 - [x] Change to support more than one Card :)
+- [ ] Add a **New Card** button
 - [ ] Make the *points* changeable on a Card
 - [ ] Implement the Feature model
 - [ ] Implement the Sprint model
