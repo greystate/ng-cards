@@ -25,6 +25,8 @@ public/
 - [ ] Make the *points* changeable on a Card
 - [ ] Implement the Feature model
 - [ ] Implement the Sprint model
+- [ ] Change Card to use an options hash
+- [ ] Change Task to use an options hash
 - [ ] Create a model for the Burndown chart
 - [ ] Show the totals (remaining points)
 
