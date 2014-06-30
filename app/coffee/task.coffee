@@ -1,6 +1,7 @@
 class Task
 	# Enums/constants
 	@DONE = yes
+	@POINTS = [1, 3, 5, 8, 13, 20]
 	
 	constructor: (options={}) ->
 		{@title, @points, @done} = options
