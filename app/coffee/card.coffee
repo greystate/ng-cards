@@ -8,6 +8,9 @@ class Card
 	addTask: (title, points=0, done=no) ->
 		@tasks.push	new Task {title, points, done}
 	
+	isComplete: ->
+		@pointsLeft() is 0 and @pointsTotal() isnt 0
+	
 	pointsLeft: ->
 		{total, left} = @getPoints()
 		left
