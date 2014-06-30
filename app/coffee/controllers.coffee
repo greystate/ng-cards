@@ -10,7 +10,9 @@ cardController = cardsApp.controller "CardController", ($scope, cardsService) ->
 	$scope.cards = cardsService.getSomeTestCards()
 
 	$scope.new = ->
-		$scope.cards.push new Card "New Card", "CS"
+		$scope.cards.push new Card
+			title: "New Card"
+			assignee: "CS"
 
 	
 

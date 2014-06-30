@@ -1,6 +1,9 @@
 class Card
-	constructor: (@title, @assignee = "") ->
-		@tasks = []
+	constructor: (options={}) ->
+		{@title, @assignee, @tasks} = options
+		@title or= ''
+		@assignee or= ''
+		@tasks or= []
 	
 	addTask: (title, points=0, done=no) ->
 		@tasks.push	new Task {title, points, done}
