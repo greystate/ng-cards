@@ -26,7 +26,7 @@ public/
 - [ ] Implement the Feature model
 - [ ] Implement the Sprint model
 - [ ] Change Card to use an options hash
-- [ ] Change Task to use an options hash
+- [x] Change Task to use an options hash
 - [ ] Create a model for the Burndown chart
 - [ ] Show the totals (remaining points)
 
