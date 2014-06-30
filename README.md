@@ -29,6 +29,7 @@ public/
 - [x] Change Task to use an options hash
 - [ ] Create a model for the Burndown chart
 - [ ] Show the totals (remaining points)
+- [x] Implement "Create new task" on a Card
 
 
 [LESS]: http://lesscss.org
