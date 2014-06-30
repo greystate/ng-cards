@@ -10,7 +10,7 @@
 <body>
 	
 	<div class="feature" ng-controller="CardController">
-		<div class="card" ng-repeat="card in cards">
+		<div class="card" ng-class="{'done' : card.isComplete()}" ng-repeat="card in cards">
 			<h1><a href="#" editable-text="card.title" buttons="no">{{ card.title }}</a></h1>
 		
 			<ul>
