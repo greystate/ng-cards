@@ -87,31 +87,29 @@
 		opacity: 0.3;
 		font-style: italic;
 	}
-	
-	&.new {
-		border-style: dashed;
-		border-width: 2px;
-		
-		&:hover {
-			transform: scale(0.55) translateY(20px);
-			opacity: 1;
-		}
-	}
 }
 
 button.new {
+	transition: all 0.3s ease-in;
 	box-sizing: content-box;
 	border-style: dashed;
 	border-color: hsla(120, 50%, 75%, 0.5);
-	border-width: 4px;
+	border-width: 2px;
 	background: transparent;
-	
-	width: 8em;
-	margin: 0 -80px 0 0;
+	font-size: 2em;
+	font-weight: bold;
+	margin: 40px 0 0 40px;
 	width: 75px;
 	height: 75px;
+	border-radius: 8px;
+	cursor: pointer;
+	opacity: 0.5;
+	color: hsla(120, 50%, 50%, 0.8); // #999;
 	
 	&:hover {
-		
+		background: hsla(120, 50%, 50%, 0.2);
+		border-color: hsla(120, 50%, 50%, 0.8);
+		opacity: 1.0;
+
 	}
 }
