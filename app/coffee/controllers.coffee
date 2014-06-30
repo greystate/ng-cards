@@ -8,6 +8,7 @@ cardController = cardsApp.controller "CardController", ($scope, cardsService) ->
 	]
 	
 	$scope.cards = cardsService.getSomeTestCards()
+	$scope.taskPoints = Task.POINTS
 
 	$scope.new = ->
 		$scope.cards.push new Card
