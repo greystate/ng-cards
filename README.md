@@ -1,7 +1,8 @@
 # Angular Cards
 
-A port of my (unreleased) **xcards** project, which is a Scrum-like way of keeping track of
-features and tasks in a given project.
+An AngularJS port of my (unreleased) **xcards** project, which is a Scrum-like way of keeping track of
+features and tasks in a given project; originally implemented using XML & XSLT, but this time I'm doing it all
+client-side with AngularJS. 
 
 On-going project as I wade through [Sean Fioritto][SF]'s [Angular Course][NGC] ...
 
