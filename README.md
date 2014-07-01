@@ -22,14 +22,14 @@ public/
 
 - [x] Implement the Card model
 - [x] Change to support more than one Card :)
-- [ ] Add a **New Card** button
+- [x] Add a **New Card** button
 - [x] Make the *points* changeable on a Card
 - [ ] Implement the Feature model
 - [ ] Implement the Sprint model
 - [x] Change Card to use an options hash
 - [x] Change Task to use an options hash
 - [ ] Create a model for the Burndown chart
-- [ ] Show the totals (remaining points)
+- [x] Show the totals (remaining points)
 - [x] Implement "Create new task" on a Card
 
 

@@ -31,7 +31,13 @@
 		</div>
 		
 		<button class="new" ng-click="new()" title="Add another Card...">&#x002B;</button>
+
+		<div id="stats">
+			Total points remaining:
+			<span class="points">{{ remainingPoints() }}</span>
+		</div>
 	</div>
+
 
 <script src="/scripts/angular.min.js"></script>
 <script src="/scripts/libs.min.js"></script>
