@@ -10,7 +10,7 @@ On-going project as I wade through [Sean Fioritto][SF]'s [Angular Course][NGC] .
 
 You may notice it's all [CoffeeScript][CS], [LESS][LESS] & [Kit][KIT] - which are all supported by the excellent [CodeKit 2][CK] app. If you're more of a *Grunt* type of guy/girl, you should be able to do that as well. Just have your pre-processor(s) build into the `public` folder like this:
 
-```python
+```
 public/
    css/
    scripts/
