@@ -24,7 +24,7 @@ public/
 - [x] Change to support more than one Card :)
 - [x] Add a **New Card** button
 - [x] Make the *points* changeable on a Card
-- [ ] Implement the Feature model
+- [x] Implement the Feature model
 - [ ] Implement the Sprint model
 - [x] Change Card to use an options hash
 - [x] Change Task to use an options hash
