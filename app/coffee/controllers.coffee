@@ -1,4 +1,4 @@
-cardController = cardsApp.controller "CardController", ($scope, cardsService) ->
+featureController = cardsApp.controller "FeatureController", ($scope, cardsService) ->
 	$scope.employees = [
 		name: "Chriztian"
 		initials: "CS"
@@ -6,19 +6,17 @@ cardController = cardsApp.controller "CardController", ($scope, cardsService) ->
 		name: "Niels"
 		initials: "NS"
 	]
-	
-	$scope.cards = cardsService.getSomeTestCards()
+
+	$scope.feature = cardsService.getATestFeature()
+	# $scope.cards = cardsService.getSomeTestCards()
 	$scope.taskPoints = Task.POINTS
 
 	$scope.remainingPoints = ->
 		total = 0
-		total += card.pointsLeft() for card in $scope.cards
+		total += card.pointsLeft() for card in $scope.feature.cards
 		total
 	
 	$scope.new = ->
-		$scope.cards.push new Card
+		$scope.feature.cards.push new Card
 			title: "New Card"
 			assignee: "CS"
-
-	
-

@@ -9,8 +9,9 @@
 </head>
 <body>
 	
-	<div class="feature" ng-controller="CardController">
-		<div class="card" ng-class="{'done' : card.isComplete()}" ng-repeat="card in cards">
+	<div class="feature" ng-controller="FeatureController">
+		<h2>{{ feature.name }}<sup>{{ feature.area }}</sup></h2>
+		<div class="card" ng-class="{'done' : card.isComplete()}" ng-repeat="card in feature.cards">
 			<h1><a href="#" editable-text="card.title" buttons="no">{{ card.title }}</a></h1>
 		
 			<ul>
