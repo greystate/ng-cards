@@ -17,3 +17,7 @@ cardsService = cardsApp.factory "cardsService", ->
 			cards.push card
 			
 			cards
+			
+		getATestFeature: ->
+			feature = new Feature
+				cards: @getSomeTestCards()
