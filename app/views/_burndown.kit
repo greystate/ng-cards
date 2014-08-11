@@ -1,0 +1,26 @@
+<div id="burndown" style="width:{{days * 20}}px" ng-controller="BurndownController">
+	<div class="target"></div>
+	<div ng-repeat="burn in burns | orderBy:'date'" class="burn" style="height: {{burn.value * 100 / total}}%" data-value="{{burn.value}}"></div>
+	
+	<xsl:if test="not(burn[last()] = $remaining-points)">
+		<!-- Show current progress -->
+		<xsl:call-template name="burn">
+			<xsl:with-param name="add-class" select="'current'" />
+			<xsl:with-param name="value" select="$remaining-points" />
+		</xsl:call-template>
+	</xsl:if>
+</div>
+
+<div class="velocity" ng-controller="BurndownController">
+	<p>Target velocity: {{target | number:1}} points/day.</p>
+	<p>Current velocity: <span ng-class="{ok: current >= target, bad: current < target}">{{ current | number:1 }}</span> points/day.</p>
+</div>
+
+
+	<xsl:template match="burn" name="burn">
+		<xsl:param name="value" select="." />
+		<xsl:param name="add-class" />
+		<xsl:variable name="height" select="floor(100 * $value div $total)" />
+
+		<div class="{normalize-space(concat('burn ', $add-class))}" style="height: {$height}%" data-value="{$value}"></div>
+	</xsl:template>

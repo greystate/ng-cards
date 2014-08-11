@@ -9,6 +9,8 @@
 </head>
 <body>
 	
+	<!-- @include "burndown" -->
+	
 	<div class="feature" ng-controller="FeatureController">
 		<h2>{{ feature.name }}<sup>{{ feature.area }}</sup></h2>
 		<div class="card" ng-class="{'done' : card.isComplete()}" ng-repeat="card in feature.cards">
