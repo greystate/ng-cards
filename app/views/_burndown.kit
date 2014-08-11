@@ -13,14 +13,5 @@
 
 <div class="velocity" ng-controller="BurndownController">
 	<p>Target velocity: {{target | number:1}} points/day.</p>
-	<p>Current velocity: <span ng-class="{ok: current >= target, bad: current < target}">{{ current | number:1 }}</span> points/day.</p>
+	<p ng-click="addBurn()">Current velocity: <span ng-class="{ok: current >= target, bad: current < target}">{{ current | number:1 }}</span> points/day.</p>
 </div>
-
-
-	<xsl:template match="burn" name="burn">
-		<xsl:param name="value" select="." />
-		<xsl:param name="add-class" />
-		<xsl:variable name="height" select="floor(100 * $value div $total)" />
-
-		<div class="{normalize-space(concat('burn ', $add-class))}" style="height: {$height}%" data-value="{$value}"></div>
-	</xsl:template>

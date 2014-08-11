@@ -7,12 +7,12 @@
 	<link rel="stylesheet" href="/css/xcards.css">
 	<link rel="stylesheet" href="/css/app.css">
 </head>
-<body>
+<body ng-controller="SprintController">
 	
 	<!-- @include "burndown" -->
 	
-	<div class="feature" ng-controller="FeatureController">
-		<h2>{{ feature.name }}<sup>{{ feature.area }}</sup></h2>
+	<div class="feature" ng-repeat="feature in features">
+		<h2><a href="#" editable-text="feature.name" buttons="no">{{ feature.name }}</a><sup><a href="#" editable-text="feature.area" buttons="no">{{ feature.area }}</a></sup></h2>
 		<div class="card" ng-class="{'done' : card.isComplete()}" ng-repeat="card in feature.cards">
 			<h1><a href="#" editable-text="card.title" buttons="no">{{ card.title }}</a></h1>
 		
@@ -33,7 +33,7 @@
 			</p>
 		</div>
 		
-		<button class="new" ng-click="new()" title="Add another Card...">&#x002B;</button>
+		<button class="new" ng-click="addCard(feature)" title="Add another Card...">&#x002B;</button>
 
 		<div id="stats">
 			Total points remaining:
