@@ -1,9 +1,12 @@
 <div id="burndown" style="width:{{sprint.days * 20}}px">
 	<div class="target"></div>
 	<div ng-repeat="burn in sprint.burndown.burns | orderBy:'date'" class="burn" style="height: {{burn.value * 100 / sprint.totalPoints()}}%" data-value="{{burn.value}}"></div>
+
+	<div class="burn current" ng-if="sprint.remainingPoints() != sprint.burndown.burns[sprint.burndown.burns.length - 1].value" style="height:{{sprint.remainingPoints() * 100 / sprint.totalPoints()}}%" data-value="{{sprint.remainingPoints()}}"></div>
+
 </div>
 
 <div class="velocity">
 	<p>Target velocity: {{sprint.targetVelocity() | number:1}} points/day.</p>
-	<p ng-click="addBurn()">Current velocity: <span ng-class="{ok: sprint.currentVelocity() >= sprint.targetVelocity(), bad: current < target}">{{ sprint.currentVelocity() | number:1 }}</span> points/day.</p>
+	<p ng-click="addBurn()">Current velocity: <span ng-class="{ok: sprint.currentVelocity() >= sprint.targetVelocity(), bad: sprint.currentVelocity() < sprint.targetVelocity()}">{{ sprint.currentVelocity() | number:1 }}</span> points/day.</p>
 </div>
