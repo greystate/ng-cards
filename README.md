@@ -31,6 +31,9 @@ public/
 - [x] Create a model for the Burndown chart
 - [x] Show the totals (remaining points)
 - [x] Implement "Create new task" on a Card
+- [ ] Save data in localStorage
+- [ ] Add "Log burn..." button to Burndown chart
+
 
 
 [LESS]: http://lesscss.org
