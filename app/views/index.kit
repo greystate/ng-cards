@@ -9,36 +9,42 @@
 </head>
 <body ng-controller="SprintController">
 	
-	<!-- @include "burndown" -->
-	
-	<div class="feature" ng-repeat="feature in features">
-		<h2><a href="#" editable-text="feature.name" buttons="no">{{ feature.name }}</a><sup><a href="#" editable-text="feature.area" buttons="no">{{ feature.area }}</a></sup></h2>
-		<div class="card" ng-class="{'done' : card.isComplete()}" ng-repeat="card in feature.cards">
-			<h1><a href="#" editable-text="card.title" buttons="no">{{ card.title }}</a></h1>
-		
-			<ul>
-				<li ng-repeat="task in card.tasks" ng-class="{done: task.done}">
-					<input type="checkbox" ng-model="task.done" ng-checked="task.done" />
-					<a href="#" editable-text="task.title" buttons="no">{{ task.title }}</a>
-					<span><a href="#" ng-model="task.points" editable-select="task.points" buttons="no" e-ng-options="v for v in taskPoints">{{ task.points }}</a></span>
-				</li>
-				<li class="new"><a class="editable-click" href="#" ng-click="card.addTask('New task', 5)">Add task...</a></li>
-			</ul>
-		
-			<p class="stats">
-				<span class="assignee">
-					<a href="#edit-assignee" model="card.assignee" editable-select="card.assignee" buttons="no" e-ng-options="e.initials as e.name for e in employees">{{ card.assignee }}</a>
-				</span>
-				<span class="points">{{ card.pointsLeft() }}</span>
-			</p>
-		</div>
-		
-		<button class="new" ng-click="addCard(feature)" title="Add another Card...">&#x002B;</button>
+	<section class="sprint inprogress" ng-repeat="sprint in sprints">
+		<header>
+			<h2>Sprint {{ sprint.name }}</h2>
+		</header>
 
-		<div id="stats">
-			Total points remaining:
-			<span class="points">{{ remainingPoints() }}</span>
+		<!-- @include "burndown" -->
+	
+		<div class="feature" ng-repeat="feature in sprint.features">
+			<h2><a href="#" editable-text="feature.name" buttons="no">{{ feature.name }}</a><sup><a href="#" editable-text="feature.area" buttons="no">{{ feature.area }}</a></sup></h2>
+			<div class="card" ng-class="{'done' : card.isComplete()}" ng-repeat="card in feature.cards">
+				<h1><a href="#" editable-text="card.title" buttons="no">{{ card.title }}</a></h1>
+		
+				<ul>
+					<li ng-repeat="task in card.tasks" ng-class="{done: task.done}">
+						<input type="checkbox" ng-model="task.done" ng-checked="task.done" />
+						<a href="#" editable-text="task.title" buttons="no">{{ task.title }}</a>
+						<span><a href="#" ng-model="task.points" editable-select="task.points" buttons="no" e-ng-options="v for v in taskPoints">{{ task.points }}</a></span>
+					</li>
+					<li class="new"><a class="editable-click" href="#" ng-click="card.addTask('New task', 5)">Add task...</a></li>
+				</ul>
+		
+				<p class="stats">
+					<span class="assignee">
+						<a href="#edit-assignee" model="card.assignee" editable-select="card.assignee" buttons="no" e-ng-options="e.initials as e.name for e in employees">{{ card.assignee }}</a>
+					</span>
+					<span class="points">{{ card.pointsLeft() }}</span>
+				</p>
+			</div>
+		
+			<button class="new" ng-click="addCard(feature)" title="Add another Card...">&#x002B;</button>
 		</div>
+	</section>
+	
+	<div id="stats">
+		Total points remaining:
+		<span class="points">{{ remainingPoints() }}</span>
 	</div>
 
 
