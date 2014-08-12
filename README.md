@@ -25,10 +25,10 @@ public/
 - [x] Add a **New Card** button
 - [x] Make the *points* changeable on a Card
 - [x] Implement the Feature model
-- [ ] Implement the Sprint model
+- [x] Implement the Sprint model
 - [x] Change Card to use an options hash
 - [x] Change Task to use an options hash
-- [ ] Create a model for the Burndown chart
+- [x] Create a model for the Burndown chart
 - [x] Show the totals (remaining points)
 - [x] Implement "Create new task" on a Card
 
