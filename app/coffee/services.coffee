@@ -1,4 +1,4 @@
-cardsService = cardsApp.factory "cardsService", ->
+sprintService = cardsApp.factory "sprintService", ->
 	factory =
 		getSomeTestCards: ->
 			cards = []
@@ -17,7 +17,31 @@ cardsService = cardsApp.factory "cardsService", ->
 			cards.push card
 			
 			cards
-			
-		getATestFeature: ->
+
+		getTestBurndown: ->
+			burndown = new Burndown 5
+			burndown.burn
+				date: "2014-07-09"
+				value: 3
+			burndown.burn
+				date: "2014-07-08"
+				value: 20
+			burndown.burn
+				date: "2014-07-07"
+				value: 32
+			burndown.burn
+				date: "2014-07-10"
+				value: 1
+			burndown
+
+		getTestFeature: ->
 			feature = new Feature
 				cards: @getSomeTestCards()
+
+		getTestSprints: ->
+			sprints = []
+			sprint = new Sprint "A", 5
+			sprint.features[0] = @getTestFeature()
+			sprint.burndown = @getTestBurndown()
+			sprints.push sprint
+			sprints
