@@ -11,7 +11,7 @@
 	
 	<section class="sprint inprogress" ng-repeat="sprint in sprints">
 		<header>
-			<h2>Sprint {{ sprint.name }}</h2>
+			<h2>Sprint {{ sprint.name }} <small style="opacity:0.4;font-size:50%; padding-left:4em;">({{sprint.totalPoints()}} points)</small></h2>
 		</header>
 
 		<!-- @include "burndown" -->
@@ -27,7 +27,7 @@
 						<a href="#" editable-text="task.title" buttons="no">{{ task.title }}</a>
 						<span><a href="#" ng-model="task.points" editable-select="task.points" buttons="no" e-ng-options="v for v in taskPoints">{{ task.points }}</a></span>
 					</li>
-					<li class="new"><a class="editable-click" href="#" ng-click="card.addTask('New task', 5)">Add task...</a></li>
+					<li class="new"><a class="editable-click" href="#" ng-click="addTask(card)">Add task...</a></li>
 				</ul>
 		
 				<p class="stats">

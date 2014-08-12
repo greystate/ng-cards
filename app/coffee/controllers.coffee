@@ -3,6 +3,8 @@ sprintController = cardsApp.controller "SprintController", ($scope, sprintServic
 	$scope.taskPoints = Task.POINTS
 
 	$scope.currentSprint = $scope.sprints[0]
+	$scope.$on "card.task.add", () ->
+		$scope.currentSprint.burndown.updateValues()
 
 	$scope.addCard = (feature) ->
 		feature.addCard new Card
@@ -10,4 +12,7 @@ sprintController = cardsApp.controller "SprintController", ($scope, sprintServic
 			assignee:
 				name: "Chriztian"
 				initials: "CS"
-	
+
+	$scope.addTask = (card) ->
+		card.addTask "Code", 5
+		$scope.$emit "card.task.add"
