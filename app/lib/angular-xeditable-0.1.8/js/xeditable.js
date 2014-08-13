@@ -54,7 +54,7 @@ angular.module('xeditable', [])
    * @var {string} activate
    * @memberOf editable-options
    */
-  activate: 'focus'
+  activate: 'select'
 
 });
 /*
