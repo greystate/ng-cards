@@ -20,6 +20,9 @@ public/
 
 ## Status / Todo
 
+- [ ] Save data in localStorage
+- [ ] Add "Log burn..." button to Burndown chart
+- [ ] Do `.focus()` and `.select()` for *xeditable* items
 - [x] Implement the Card model
 - [x] Change to support more than one Card :)
 - [x] Add a **New Card** button
@@ -31,8 +34,6 @@ public/
 - [x] Create a model for the Burndown chart
 - [x] Show the totals (remaining points)
 - [x] Implement "Create new task" on a Card
-- [ ] Save data in localStorage
-- [ ] Add "Log burn..." button to Burndown chart
 
 
 
