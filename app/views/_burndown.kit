@@ -7,6 +7,7 @@
 </div>
 
 <div class="velocity">
-	<p>Target velocity: {{sprint.targetVelocity() | number:1}} points/day.</p>
-	<p ng-click="addBurn()">Current velocity: <span ng-class="{ok: sprint.currentVelocity() >= sprint.targetVelocity(), bad: sprint.currentVelocity() < sprint.targetVelocity()}">{{ sprint.currentVelocity() | number:1 }}</span> points/day.</p>
+	<p>Target velocity: <span class="v-target">{{sprint.targetVelocity() | number:1}}</span></p>
+	<p ng-click="addBurn()">Current velocity: <span ng-class="{ok: sprint.currentVelocity() >= sprint.targetVelocity(), bad: sprint.currentVelocity() &lt; sprint.targetVelocity()}">{{ sprint.currentVelocity() | number:1 }}</span></p>
+	<p class="projected" ng-show="sprint.remainingPoints() &lt; sprint.burndown.burns[sprint.burndown.burns.length - 1].value">Projected velocity: <span ng-class="{ok: sprint.projectedVelocity() >= sprint.targetVelocity(), bad: sprint.projectedVelocity() &lt; sprint.targetVelocity()}">{{ sprint.projectedVelocity() | number:1}}</span></p>
 </div>

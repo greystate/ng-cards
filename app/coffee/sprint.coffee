@@ -21,3 +21,9 @@ class Sprint
 	currentVelocity: ->
 		burnCount = @burndown.burns.length
 		(@totalPoints() - @burndown.burns[burnCount - 1].value) / burnCount
+	
+	projectedVelocity: ->
+		days = @burndown.burns.length + 1
+		(@totalPoints() - @remainingPoints()) / days
+
+
