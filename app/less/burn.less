@@ -66,13 +66,19 @@
 	line-height: 1.1;
 	text-align: right;
 	font-size: 12px;
+
+	.bad, .ok, .v-target {
+		border-radius: 2px;
+		padding: 2px 3px 0;
+		color: #fff;
+	}
+	.bad { background-color: #c00; }
+	.ok { background-color: #090; }
+	.v-target { background: #999; }
+
+	.projected {
+		opacity: 0.3;
+	}
 }
 
-.bad, .ok {
-	border-radius: 2px;
-	padding: 2px 3px 0;
-	color: #fff;
-}
 
-.bad { background-color: #c00; }
-.ok { background-color: #090; }
