@@ -22,7 +22,7 @@ public/
 
 - [ ] Save data in localStorage
 - [ ] Add "Log burn..." button to Burndown chart
-- [ ] Do `.focus()` and `.select()` for *xeditable* items
+- [x] Do `.focus()` and `.select()` for *xeditable* items
 - [x] Implement the Card model
 - [x] Change to support more than one Card :)
 - [x] Add a **New Card** button
