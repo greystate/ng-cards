@@ -62,7 +62,7 @@
 }
 
 .velocity {
-	padding-top: 2em;
+	padding-top: 0.6em;
 	line-height: 1.1;
 	text-align: right;
 	font-size: 12px;
@@ -78,6 +78,23 @@
 
 	.projected {
 		opacity: 0.3;
+	}
+	
+	button {
+		font: inherit;
+		border: none;
+		background: rgba(202, 193, 58, 0.3);
+		border: 1px dashed rgba(0, 0, 0, 0.3);
+		border-radius: 3px;
+		height: 25px;
+		line-height: 25px;
+		padding: 0 10px;
+		cursor: pointer;
+		color: #555;
+		
+		&:hover {
+			background: rgba(202, 193, 58, 0.5);
+		}
 	}
 }
 

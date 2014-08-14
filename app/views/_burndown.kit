@@ -3,11 +3,11 @@
 	<div ng-repeat="burn in sprint.burndown.burns | orderBy:'date'" class="burn" style="height: {{burn.value * 100 / sprint.totalPoints()}}%" data-value="{{burn.value}}"></div>
 
 	<div class="burn current" ng-if="sprint.remainingPoints() != sprint.burndown.burns[sprint.burndown.burns.length - 1].value" style="height:{{sprint.remainingPoints() * 100 / sprint.totalPoints()}}%" data-value="{{sprint.remainingPoints()}}"></div>
-
 </div>
 
 <div class="velocity">
 	<p>Target velocity: <span class="v-target">{{sprint.targetVelocity() | number:1}}</span></p>
 	<p ng-click="addBurn()">Current velocity: <span ng-class="{ok: sprint.currentVelocity() >= sprint.targetVelocity(), bad: sprint.currentVelocity() &lt; sprint.targetVelocity()}">{{ sprint.currentVelocity() | number:1 }}</span></p>
 	<p class="projected" ng-show="sprint.remainingPoints() &lt; sprint.burndown.burns[sprint.burndown.burns.length - 1].value">Projected velocity: <span ng-class="{ok: sprint.projectedVelocity() >= sprint.targetVelocity(), bad: sprint.projectedVelocity() &lt; sprint.targetVelocity()}">{{ sprint.projectedVelocity() | number:1}}</span></p>
+	<button ng-click="addBurn()" ng-show="sprint.remainingPoints() &lt; sprint.burndown.burns[sprint.burndown.burns.length - 1].value">Log latest</button>
 </div>

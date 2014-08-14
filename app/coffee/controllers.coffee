@@ -15,3 +15,11 @@ sprintController = cardsApp.controller "SprintController", ($scope, sprintServic
 	$scope.addTask = (card) ->
 		card.addTask "Code", 5
 		$scope.$emit "card.task.add"
+
+	$scope.addBurn = ->
+		sprint = $scope.currentSprint
+		burnValue = sprint.remainingPoints()
+		burnDelta = sprint.burndown.burns[sprint.burndown.burns.length - 1].value - burnValue
+		sprint.burndown.burn
+			date: (new Date).toISOString().substring 0, 10
+			delta: burnDelta
