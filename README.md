@@ -21,8 +21,8 @@ public/
 ## Status / Todo
 
 - [ ] Save data in localStorage
-- [ ] Add "Log burn..." button to Burndown chart
-- [ ] Add a proper User class for Card assignment
+- [x] Add "Log burn..." button to Burndown chart
+- [x] Add a proper User class for Card assignment
 - [x] Do `.focus()` and `.select()` for *xeditable* items
 - [x] Implement the Card model
 - [x] Change to support more than one Card :)
