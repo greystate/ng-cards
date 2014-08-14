@@ -46,3 +46,25 @@ sprintService = cardsApp.factory "sprintService", ->
 			sprint.burndown = @getTestBurndown(sprint)
 			sprints.push sprint
 			sprints
+		
+		getTestUsers: ->
+			users = []
+			user1 = new User
+				name: "Chrizian Steinmeier"
+				initials: "CS"
+			user2 = new User
+				name: "Niels Steinmeier"
+				initials: "NS"
+			user3 = new User
+				name: "Karsten Moskjær Kofod"
+				initials: "KMK"
+			users.push user for user in [user1, user2, user3]
+			users
+			
+		
+		getEmptyStartSprint: ->
+			sprints = []
+			sprint = new Sprint "Initial Test", 10
+			sprint.features[0] = new Feature
+			sprints.push sprint
+			sprints

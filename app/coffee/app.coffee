@@ -5,6 +5,7 @@
 # @codekit-append "feature.coffee"
 # @codekit-append "burndown.coffee"
 # @codekit-append "sprint.coffee"
+# @codekit-append "user.coffee"
 
 # Global app object 
 window.cardsApp = angular.module "Cards", ["xeditable"]
