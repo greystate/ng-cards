@@ -32,7 +32,7 @@
 		
 				<p class="stats">
 					<span class="assignee">
-						<a href="#edit-assignee" model="card.assignee" editable-select="card.assignee" buttons="no" e-ng-options="e.initials as e.name for e in employees">{{ card.assignee }}</a>
+						<a href="#edit-assignee" model="card.assignee" editable-select="card.assignee" buttons="no" e-ng-options="e as e.name for e in users">{{ card.assignee.initials }}</a>
 					</span>
 					<span class="points">{{ card.pointsLeft() }}</span>
 				</p>
